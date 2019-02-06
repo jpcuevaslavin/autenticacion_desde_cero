@@ -1,0 +1,14 @@
+<%= notice %>
+<%= alert %>
+
+<h3>
+  Iniciar sesión
+</h3>
+
+<%= form_with(url: sessions_path, scope: :user, local: true) do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <%= f.submit 'Iniciar sesión' %>
+<% end %>
